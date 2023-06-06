@@ -373,15 +373,16 @@
           </svg>
   <label>Komentarz</label>
   <textarea name="text" rows="5" placeholder="Wprowadź tekst"></textarea>
-<label for="gdpr">Oświadczam, iż akceptuję Regulamin i Politykę prywatności</label>
+<div class="modal-agreement">
   <input type="checkbox" name="agreedToGDPR" id="gdpr">
+<label for="gdpr">Oświadczam, iż akceptuję <a class="modal-link">Regulamin</a> i <a class="modal-link">Politykę prywatności</a></label>
+</div>
 <button class="send-btn" type="submit">Wyślij</button>
 </form>
 <button type="button" class="close-btn" data-modal-close>
-  
     <svg widht="18px" height="18px">
       <use href="./images/icons.svg#icon-close-black-18dp-2-1"></use>
-       </svg>
+    </svg>
         </div>
         </button>
 </div>

@@ -685,6 +685,8 @@ footer {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+}
+.newsletter-email-box input::placeholder {
   font-size: 16px;
   line-height: 1.25;
   display: flex;
@@ -745,6 +747,9 @@ footer {
 }
 .modal h3 {
   text-align: center;
+  margin: 0;
+  padding-top: 37px;
+  padding-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
   line-height: 1, 15;
@@ -754,10 +759,73 @@ footer {
 }
 .modal form {
   display: flex;
+  padding-left: 40px;
+  padding-right: 40px;
   flex-direction: column;
-  padding: 37px, 40px, 43px, 40px;
+}
+.modal form label {
+  font-size: 12px;
+  padding-bottom: 4px;
+  line-height: 1, 17;
+  letter-spacing: 0.01em;
+  color: var(--light-grey);
 }
 
+.modal form input {
+  height: 40px;
+}
+
+.modal form input,
+.modal form textarea {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal form input:hover,
+.modal form input:focus,
+.modal form textarea:hover,
+.modal form textarea:focus {
+  border-color: var(--brand-color);
+}
+
+.modal form textarea {
+  height: 120px;
+  font-size: 12px;
+  line-height: 1, 17;
+  letter-spacing: 0.01em;
+  padding: 12px 16px;
+  resize: none;
+  color: rgba(117, 117, 117, 0.5);
+}
+.modal form textarea::placeholder {
+  font-size: 12px;
+  line-height: 1, 17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.modal-agreement {
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+.modal form label:last-child {
+  font-size: 14px;
+  line-height: 1, 71;
+  letter-spacing: 0.03em;
+  color: var(--light-grey);
+}
+/*.modal form input[type="name"] {
+  background-color: url(<id="icon-person-black-18dp-1"viewBox="0 0 32 32"><pathd="M16 16c2.947 0 5.333-2.387 5.333-5.333S18.946 5.334 16 5.334c-2.947 0-5.333 2.387-5.333 5.333S13.054 16 16 16zm0 2.667c-3.56 0-10.667 1.787-10.667 5.333v1.333c0 .733.6 1.333 1.333 1.333h18.667c.733 0 1.333-.6 1.333-1.333V24c0-3.547-7.107-5.333-10.667-5.333z");
+}*/
+.modal form input[type="checkbox"] {
+  width: 16px;
+  height: 15px;
+}
+.modal-link {
+  color: var(--brand-color);
+  text-decoration: underline;
+}
 .not-hidden {
   transition-duration: 1s;
   transition-delay: 10ms;
@@ -766,8 +834,10 @@ footer {
 }
 .send-btn {
   align-items: center;
+  width: 200px;
+  height: 50px;
   margin: auto;
-  padding: 10px 41px 10px 41px;
+  padding: 10px 41px;
   background-color: var(--brand-color);
   border: var(--brand-color);
   border-radius: 4px;
